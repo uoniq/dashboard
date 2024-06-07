@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .login-container {
+      margin-top: 20vh;
+    }
+    .login-container-mob{
+      display: none;
+      margin-top: 25vh;
+    }
+    .messageDiv{
+    background-color:hsl(327,90%,28%);
+    color:white;
+    padding:10px 20px;
+    margin:10px;
+    border-radius: 5px;
+    font-size:1rem;
+    opacity:0;
+    animation:fadeOut 7s forwards;
+
+}
+    @media screen and (max-width: 800px){
+      .carousel-hide{
+        display: none;
+      }
+      .login-container{
+        display: none;
+      }
+      .login-container-mob{
+        display: block;
+      }
+    }
+  </style>
+  <script type="module" src="firebasereg.js"></script>
+</head>
+<body>
+  <div class="col-12">
+    <form method="post" action="">
+        <div id="signUpMessage" class="messageDiv" style="display: none;"></div>
+        <div class="login-container col-4">
+            <div class="form-group col-8 mx-auto">
+                <input type="text" class="form-control" id="fName" placeholder="ФИО">
+            </div>
+            <div class="form-group col-8 mx-auto">
+                <input type="text" class="form-control" id="lName" placeholder="Молокоприемный пункт">
+            </div>
+            <div class="form-group col-8 mx-auto">
+                <input type="text" class="form-control" id="rEmail" placeholder="Пользователь">
+            </div>
+            <div class="form-group col-8 mx-auto">
+                <input type="password" class="form-control" id="rPassword" placeholder="Пароль">
+            </div>
+            <div class="form-group col-3 mx-auto">
+                <button type="button" class="btn mx-auto btn-outline-dark rounded-pill px-4" id="submitSignUp">Зарегестрировать</button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
